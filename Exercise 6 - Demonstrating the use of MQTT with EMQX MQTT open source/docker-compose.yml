@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  emqx-enterprise:
+    image: emqx/emqx-enterprise:5.8.4
+    container_name: emqx-enterprise
+    ports:
+      - "1883:1883"     # MQTT
+      - "8083:8083"     # MQTT/WebSocket
+      - "8084:8084"     # MQTT/SSL
+      - "8883:8883"     # MQTT/WebSocket/SSL
+      - "18083:18083"   # Dashboard
+    volumes:
+      - ./data:/opt/emqx/data
+      - ./log:/opt/emqx/log
+    networks:
+      - mqtt-network
+
+  mqttx-web:
+    image: emqx/mqttx-web
+    container_name: mqttx-web
+    ports:
+      - "80:80"         # HTTP
+    networks:
+      - mqtt-network
+
+networks:
+  mqtt-network:
+    driver: bridge
