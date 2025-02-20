@@ -1,8 +1,8 @@
 #include "WiFiS3.h"
 #include <ArduinoMqttClient.h>
 
-char ssid[] = "hotspot_name";
-char pass[] = "hotspot_pass"; 
+char ssid[] = "hotspot_name"; // replace placeholder
+char pass[] = "hotspot_pass"; // replace placeholder
 
 char mqtt_user[] = "arduino";
 char mqtt_pass[] = "pass";
@@ -11,7 +11,7 @@ char mqtt_pass[] = "pass";
 WiFiClient wifiClient;
 MqttClient mqttClient(wifiClient);
 
-const char broker[] = "192.168.X.X";
+const char broker[] = "192.168.X.X"; // replace placeholder
 int        port     = 1883;
 const char subscribe_topic[]  = "/hello";
 const char publish_topic[]  = "/hello/world";
