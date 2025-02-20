@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   emqx-enterprise:
     image: emqx/emqx-enterprise:5.8.4
