@@ -4,7 +4,7 @@
 - Arduino IDE is installed; and
 - The following library is installed: `Arduinojson`
 - The following files are installed: `docker-compose.yml`, `exercise-6.ino`, `exercise-6-json.ino`
-- Connected to a mobile hotspot
+- Both Laptop/PC and Arduino are connected to a mobile hotspot
 ## Exercise
 - In the same folder that the files are intstalled, run the following command using PowerShell `docker compose up -d` (this will pull the images from docker hub and spin up the containers for emqx and mqttx service)
 - Verify that the containers are running by visiting [http://localhost:18083/](http://localhost:18083/) and [http://localhost:80/](http://localhost:80/)
