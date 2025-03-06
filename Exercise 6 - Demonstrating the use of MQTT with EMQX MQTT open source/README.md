@@ -15,7 +15,7 @@
   char ssid[] = "hotdogwifi"; // replace placeholder
   char pass[] = "12345678"; // replace placeholder
   ```
-- With the same files opened, replace "192.168.X.X" with your private IP Address, you can do this by running `ipconfig | findstr IPv4` on PowerShell or `hostname -I | awk '{print $1}'` on BASH, it should look like this:
+- With the same files opened, replace "192.168.X.X" with your local IP Address, you can do this by running `ipconfig | findstr IPv4` on PowerShell or `hostname -I | awk '{print $1}'` on BASH, it should look like this:
   ```
   const char broker[] = "192.168.123.123"; // replace placeholder
   ```
